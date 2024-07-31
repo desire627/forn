@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+      background-image: url('/beab.jpg'); 
+        background-size: cover; 
+      }
+
+     
+      #Myh1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        color:black;
+        background-color: grey;
+      }
+      #Mybutton{
+        position: absolute;
+        bottom:0;
+        right:0;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        background-color: orange;
+        color:white;
+        padding: 14px 20px;
+        border-radius: 16px;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+        opacity: 0.8;
+        transition: visibility 0s, opacity 0.5s ease;
+      }
+     #Mybutton:hover {
+    background-color:blue;
+}
+
+    </style>
+</head>
+<body>
+
+<h1 id="Myh1">WELCOME</h1>
+<button id="Mybutton">LOGIN</button>
+
+
+<script>
+    // JavaScript to link buttons to pages
+    document.getElementById('Mybutton').onclick = function() {
+        window.location.href = 'assignm.html'; 
+    };
+</script>
+
+</body>
+</html>
