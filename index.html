@@ -5,55 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      body{
-      background-image: url('/beab.jpg'); 
-        background-size: cover; 
-      }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-     
-      #Myh1{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 60px;
-        color:black;
-        background-color: grey;
-      }
-      #Mybutton{
-        position: absolute;
-        bottom:0;
-        right:0;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
-        background-color: orange;
-        color:white;
-        padding: 14px 20px;
-        border-radius: 16px;
-        border: none;
-        cursor: pointer;
-        width: 200px;
-        opacity: 0.8;
-        transition: visibility 0s, opacity 0.5s ease;
-      }
-     #Mybutton:hover {
-    background-color:blue;
-}
+        html, body {
+            height: 100%;
+        }
 
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+
+        #Myp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 35px;
+            color: black;
+            background-color: grey;
+        }
+
+        #Mybutton {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 20px;
+            background-color: orange;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 16px;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+            opacity: 0.8;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+
+        #Mybutton:hover {
+            background-color: blue;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: grey;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 100px;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-items span {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .nav-items span:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="brand-name">
+            <h1>Happy Hoe Grocery Store</h1>
+        </div>
+    </nav>
 
-<h1 id="Myh1">WELCOME</h1>
-<button id="Mybutton">LOGIN</button>
+    <div class="content">
+        <div class="overlay">
+             <video class="video-background" autoplay muted loop>
+                <source src="videcs.mp4" type="video/mp4">
+            </video> 
+            <p id="Myp">Welcome to Happy Hoe Grocery Store's data management system. Mainly having two branches Matugga and Maganjo dealing in both cereals and legumes.</p>
+            <button id="Mybutton">LOGIN</button>
+        </div>
+    </div>
 
+    <footer class="footer">
+        <p>© 2024 My Website. All rights reserved.</p>
+    </footer>
 
-<script>
-    // JavaScript to link buttons to pages
-    document.getElementById('Mybutton').onclick = function() {
-        window.location.href = 'assignm.html'; 
-    };
-</script>
-
+    <script>
+        
+        document.getElementById('Mybutton').onclick = function() {
+            window.location.href = '/html/assignm.html'; 
+        };
+    </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurement Form</title>
+    <link rel="stylesheet" href="/css/procure.css">
+</head>
+<body  style="background-image: url('/img/rice.jpg');">
+    <form id="procurementForm" onsubmit="return validateForm()">
+        <h1>Procurement Form</h1>
+
+        <label for="produceName">Name of Produce:</label>
+        <input type="text" id="produceName" name="produceName" required><br><br>
+
+        <label for="produceType">Type of Produce:</label>
+        <input type="text" id="produceType" name="produceType" pattern="[A-Za-z]{2,}" required><br><br>
+
+        <label for="dateTime">Date and Time:</label>
+        <input type="datetime-local" id="dateTime" name="dateTime" required><br><br>
+
+        <label for="tonnage">Tonnage (kg):</label>
+        <input type="number" id="tonnage" name="tonnage" min="100" required><br><br>
+
+        <label for="cost">Cost (UgX):</label>
+        <input type="cost" id="cost" name="cost" min="10000" required><br><br>
+
+        <label for="dealerName">Name of Dealer:</label>
+        <input type="text" id="dealerName" name="dealerName" pattern="[A-Za-z0-9 ]{2,}" required><br><br>
+
+        <label for="branch">Branch Name:</label>
+        <select id="branch" name="branch" required>
+            <option value="">Select Branch</option>
+            <option value="Branch1">Maganjo</option>
+            <option value="Branch2">Matugga</option>
+        </select><br><br>
+
+        <label for="contact">Contact:</label>
+        <input type="tel" id="contact" name="contact" pattern="^\d{10}$" required><br><br>
+
+        <label for="price">Price to be Sold At:</label>
+        <input type="cost" id="cost" name="cost" min="10000" required><br><br>
+
+        <button type="submit">Submit</button>
+          </form>
+
+    <script src="/js/procure.js"></script>
+</body>
+</html>
